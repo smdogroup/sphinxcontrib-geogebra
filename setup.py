@@ -8,13 +8,15 @@ requires = ["Sphinx>=0.6", "setuptools"]
 
 
 setup(
-    name="ggbextension",
-    version="1.1",
+    name="sphinxcontrib-geogebra",
+    version="1.2",
     description="Sphinx geogebra applet extension",
     author="Solrun Einarsdottir",
     author_email="solrun.einarsdottir@gmail.com",
+    maintainer="Benedikt Magnusson",
+    maintainer_email="bsm@hi.is",
     packages=find_packages(),
     include_package_data=True,
     install_requires=requires,
-    namespace_packages=["ggbextension"],
+    namespace_packages=["sphinxcontrib"],
 )
