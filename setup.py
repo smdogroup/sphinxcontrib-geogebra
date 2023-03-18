@@ -9,7 +9,7 @@ requires = ["Sphinx>=0.6", "setuptools"]
 
 setup(
     name="sphinxcontrib-geogebra",
-    version="1.2",
+    version="2.0",
     description="Sphinx geogebra applet extension",
     author="Solrun Einarsdottir",
     author_email="solrun.einarsdottir@gmail.com",
