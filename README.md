@@ -8,8 +8,9 @@ argument, a geogebra tube ID::
     .. ggb:: 1264951
 
 The referenced geogebra applet will be embedded into HTML output.  
-Installation
-============
+
+## Installation
+
     1. Install this extension: 
 
     python setup.py build
@@ -29,8 +30,7 @@ Installation
 
     4. Add 'ggbextension.ggb' to your extensions in 'conf.py'
 
-Options
-=======
+## Options
 
 There are 5 optional parameters.
 "width" and "height" are the applet width and height, the defaults are 700 px width and 400 px height. 
@@ -42,10 +42,11 @@ There are 5 optional parameters.
  
 "zoom_drag" (default setting: false) to control whether the user can drag the applet image around and zoom in and out.
 
+´´´
 .. ggb:: 1264951
     :width: 846
     :height: 664
     :img: ../../_static/hi_logo.jpg
     :imgwidth: 4cm
     :zoom_drag: true 
-
+´´´
