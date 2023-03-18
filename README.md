@@ -11,15 +11,17 @@ The referenced geogebra applet will be embedded into HTML output.
 
 ## Installation
 
-    1. Install this extension: 
+1. Install this extension: 
 
+```
     python setup.py build
     sudo python setup.py install  OR  python setup.py install --user
+```
 
-    2. Add '<script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>'
-    and '<script>ggbAppletId = []; </script>' to the header block of your layout.html file in the _templates directory  
+2. Add '<script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>' and '<script>ggbAppletId = []; </script>' to the header block of your layout.html file in the _templates directory  
 
-    3. Add the following code to the footer block of your layout.html file in the _templates directory
+3. Add the following code to the footer block of your layout.html file in the _templates directory
+
         <script>
             window.addEventListener("load", function(){
                 for(var i in ggbAppletId){
@@ -42,11 +44,11 @@ There are 5 optional parameters.
  
 "zoom_drag" (default setting: false) to control whether the user can drag the applet image around and zoom in and out.
 
-´´´
+```
 .. ggb:: 1264951
     :width: 846
     :height: 664
     :img: ../../_static/hi_logo.jpg
     :imgwidth: 4cm
     :zoom_drag: true 
-´´´
+```
