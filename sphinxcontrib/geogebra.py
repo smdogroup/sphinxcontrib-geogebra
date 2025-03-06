@@ -29,7 +29,8 @@ def html_visit_ggb_node(self, node):
     self.body.append('"height": ' + node["height"] + ", \n")
     self.body.append('"material_id": "' + node["id"] + '", \n')
     self.body.append('"preventFocus": true, \n')
-    self.body.append('"enableShiftDragZoom": ' + node["zoom_drag"] + " \n")
+    self.body.append('"enableShiftDragZoom": ' + node["zoom_drag"] + ", \n")
+    self.body.append('"showFullscreenButton": ' + node["full_screen_button"] + " \n")
     self.body.append("}, true);\n")
     self.body.append('ggbAppletId["' + ID + '"] = ggbApp_' + ID + ";\n")
     self.body.append("</script>\n")
@@ -62,7 +63,7 @@ def tex_depart_ggb_node(self, node):
 class GGB(Directive):
     has_content = True
     required_arguments = 1
-    optional_arguments = 5
+    optional_arguments = 6
     final_argument_whitespace = False
     option_spec = {
         "width": directives.unchanged,
@@ -70,6 +71,7 @@ class GGB(Directive):
         "img": directives.unchanged,
         "imgwidth": directives.unchanged,
         "zoom_drag": directives.unchanged,
+        "full_screen_button": directives.unchanged,
     }
 
     def run(self):
@@ -80,6 +82,7 @@ class GGB(Directive):
         node["img"] = self.options.get("img", None)
         node["imgwidth"] = self.options.get("imgwidth", "8cm")
         node["zoom_drag"] = self.options.get("zoom_drag", "false")
+        node["full_screen_button"] = self.options.get("full_screen_button", "false")
 
         return [node]
 

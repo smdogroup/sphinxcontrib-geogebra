@@ -1,0 +1,4 @@
+build/
+dist/
+sphinxcontrib_geogebra.egg-info
+*__pycache__
